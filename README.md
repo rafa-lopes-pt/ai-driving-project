@@ -2,6 +2,8 @@
 
 **Note:** This project is based on a FreeCodeCamp project originally created using JavaScript. The codebase has been redone utilizing TypeScript, React, Bootstrap, React-Bootstrap, and Sass to enhance functionality and maintainability.
 
+[Live Website](https://ai-driving-simulation.netlify.app/)
+
 Welcome to the AI Driving project! This project showcases a React and TypeScript-based web application that simulates AI-powered self-driving cars using Bootstrap for styling. In this project, we have developed a simple AI algorithm to control the car's movements within a virtual environment.
 Table of Contents
 
