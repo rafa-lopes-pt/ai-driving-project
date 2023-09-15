@@ -1,0 +1,15 @@
+$white: #fefefe;
+
+$navbar-light-color: $white;
+$navbar-light-brand-color: $white;
+$headings-color: $white;
+$light: #0d1b2a;
+$dark: #1b263b;
+$primary: #1f5491;
+$secondary: #9ba1a7;
+$info: #d4e6f2;
+$success: #44ae6f;
+$warning: #e6ce40;
+$danger: #f42524;
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";

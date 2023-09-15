@@ -1,0 +1,115 @@
+/* Yes this should be on the main.scss file with neatly nested classes 
+ Bootstrap was added later, and thus the need to override some vars 
+ Since the goal of the project is not css per say...i think it aint that 
+bad to have 3 messy files that should be better written 
+
+        Thanks for understanding!(if you dont, then you probably dont know what is to solve and fix stuff at 3am)
+*/
+
+body {
+    background: #123;
+    background-image: url("../media/bg.jpg");
+
+    background-size: cover;
+    background-blend-mode: color-dodge;
+    height: 100svh;
+    background-color: rgba(2, 12, 44, 0.98);
+
+    position: relative;
+    backdrop-filter: blur(2px);
+}
+#root {
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+}
+/* Header */
+#header-nav {
+    padding: 0.25em 1.5em;
+    flex: 0;
+    /* height: 7vh; */
+}
+
+#header-nav__brand {
+    text-overflow: wrap;
+    max-width: 20%;
+    cursor: pointer;
+}
+
+/* Main */
+#content {
+    /* position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0; */
+    flex: auto;
+    padding: 0;
+
+    overflow: hidden;
+    /* padding: 1.5rem 1rem; */
+}
+#content > * {
+    width: 100%;
+}
+
+/* Hero */
+#hero {
+    /* background-color: #ccca; */
+    width: fit-content;
+    min-width: 75%;
+    /* background-color: red; */
+}
+/* #tech-stack__row */
+.tech-stack__col {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+}
+
+.tech-stack__img {
+    transform: translateY(1.3em);
+    transition: all 0.5s ease-out;
+}
+
+.tech-stack__title {
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+    margin: 0.25em;
+}
+
+.tech-stack__col:hover .tech-stack__img {
+    transform: translateY(0em);
+}
+
+.tech-stack__col:hover .tech-stack__title {
+    opacity: 1;
+}
+
+#heroBtns {
+    /* background-color: #fefefe50; */
+    width: fit-content;
+    padding: 0.75em 1.25em;
+    border-radius: 5px;
+}
+#heroBtns > * {
+    margin: 0em 1em;
+}
+
+/* OVERVIEW */
+#overview {
+    background-color: #7779;
+    padding: 1em 2em;
+    color: #fefefe !important;
+    border-radius: 1em;
+    backdrop-filter: blur(5px);
+
+    /* max-height: 50%; */
+    overflow: hidden;
+}
+
+.overflow-container {
+    height: 700px;
+    overflow: scroll;
+}
