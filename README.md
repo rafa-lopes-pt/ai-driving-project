@@ -1,27 +1,19 @@
-# React + TypeScript + Vite
+# AI Driving Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Note:** This project is based on a FreeCodeCamp project originally created using JavaScript. The codebase has been redone utilizing TypeScript, React, Bootstrap, React-Bootstrap, and Sass to enhance functionality and maintainability.
 
-Currently, two official plugins are available:
+Welcome to the AI Driving project! This project showcases a React and TypeScript-based web application that simulates AI-powered self-driving cars using Bootstrap for styling. In this project, we have developed a simple AI algorithm to control the car's movements within a virtual environment.
+Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## Project Overview
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+The AI Driving project demonstrates the capabilities of AI in autonomous vehicle navigation within a controlled environment. The main components of this project are:
 
-- Configure the top-level `parserOptions` property like this:
+   - React: The project is built using React, a popular JavaScript library for building user interfaces. React provides a fast and efficient way to create interactive web applications.
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+   - TypeScript: TypeScript is used to add static typing to the JavaScript codebase, making the project more robust and maintainable.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+   - Bootstrap: Bootstrap is utilized for responsive and visually appealing user interface components, ensuring that the application looks great on both desktop and mobile devices.
+
+   - AI Algorithm: We have implemented a simple neural network that controls the car's movements based on its current position and obstacles within the environment (road borders and traffic).
