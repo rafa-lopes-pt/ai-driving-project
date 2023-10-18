@@ -24,7 +24,9 @@ export default function Header({ showHome, handleHomeNav }) {
                 >
                     <Nav className="me-2 ">
                         {showHome && (
-                            <Nav.Link onClick={handleHomeNav}>Home</Nav.Link>
+                            <Nav.Link onClick={handleHomeNav}>
+                                <i class="fa-solid fa-house me-2"></i>Home
+                            </Nav.Link>
                         )}
                         <Nav.Link
                             href="https://www.youtube.com/watch?v=Rs_rAxEsAvI"
