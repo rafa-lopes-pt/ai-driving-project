@@ -4,41 +4,35 @@ export default function Hero({ overviewHandler, simulationHandler }) {
     return (
         <Container fluid id="hero">
             <Container fluid className="mt-4 mb-4">
-                <Row className="text-center  " id="tech-stack__row">
-                    <Col className="tech-stack__col">
-                        <Image
+                <div className="text-center  mx-auto" id="tech-stack__row">
+                    <div className="tech-stack__col">
+                        <img
                             src="./media/react.png"
                             alt="React JS"
-                            rounded
-                            width={140}
                             className="tech-stack__img"
                         />
                         <h3 className="tech-stack__title">React</h3>
-                    </Col>
-                    <Col className="tech-stack__col">
-                        <Image
+                    </div>
+                    <div className="tech-stack__col">
+                        <img
                             src="./media/ts.png"
                             alt="Typescript"
-                            rounded
-                            width={120}
                             className="tech-stack__img"
                         />
                         <h3 className="tech-stack__title">Typescript</h3>
-                    </Col>
-                    <Col className="tech-stack__col">
-                        <Image
+                    </div>
+                    <div className="tech-stack__col">
+                        <img
                             src="./media/bootstrap.svg"
                             alt="Bootstrap"
-                            rounded
-                            width={150}
                             className="tech-stack__img"
                         />
                         <h3 className="tech-stack__title">Bootstrap</h3>
-                    </Col>
-                </Row>
+                    </div>
+                </div>
             </Container>
             <h1 className="text-center m-5">AI Driving Simulation</h1>
-            <Container id="heroBtns">
+            <Container id="heroBtns" fluid>
                 <Button variant="outline-info" onClick={overviewHandler}>
                     Overview
                 </Button>

@@ -4,15 +4,14 @@ import { Accordion, Button, CloseButton, Container } from "react-bootstrap";
 export default function Overview({ onClose }) {
     return (
         <Container id="overview">
-            <span className="d-flex align-items-center justify-content-center">
-                {" "}
+            <header className="d-flex align-items-center justify-content-center overview__header">
                 <h1 className="text-center m-auto">Project Overview</h1>
                 <CloseButton
-                    className="me-2"
+                    className="me-2 closeBtn"
                     variant="white"
                     onClick={onClose}
                 />
-            </span>
+            </header>
             <hr></hr>
             <div className="overflow-container">
                 {" "}

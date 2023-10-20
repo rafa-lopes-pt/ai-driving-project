@@ -55,22 +55,46 @@ body {
 
 /* Hero */
 #hero {
-    /* background-color: #ccca; */
-    width: fit-content;
-    min-width: 75%;
-    /* background-color: red; */
+    width: 100%;
 }
-/* #tech-stack__row */
+#tech-stack__row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 90%;
+}
 .tech-stack__col {
     display: flex;
     flex-direction: column;
     place-content: center;
     place-items: center;
+    width: 33%;
 }
 
 .tech-stack__img {
     transform: translateY(1.3em);
     transition: all 0.5s ease-out;
+    height: 8rem;
+
+    aspect-ratio: square;
+}
+
+@media (hover: none) {
+    .tech-stack__img {
+        height: 3rem;
+    }
+    .tech-stack__col .tech-stack__img {
+        transform: translateY(0em);
+    }
+
+    .tech-stack__col .tech-stack__title {
+        opacity: 1;
+        background-color: #1f5491aa;
+        box-shadow: 2px 2px 20px 2px #eee5,
+            inset 2px 2px 20px 2px rgba(75, 86, 128, 0.933);
+        font-size: 1rem;
+        padding: 0.25rem 0.5rem;
+    }
 }
 
 .tech-stack__title {
@@ -79,12 +103,17 @@ body {
     margin: 0.25em;
 }
 
-.tech-stack__col:hover .tech-stack__img {
-    transform: translateY(0em);
-}
+@media (hover: hover) {
+    .tech-stack__col:hover .tech-stack__img {
+        transform: translateY(0em);
+    }
 
-.tech-stack__col:hover .tech-stack__title {
-    opacity: 1;
+    .tech-stack__col:hover .tech-stack__title {
+        opacity: 1;
+        background-color: #1f5491aa;
+        box-shadow: 2px 2px 20px 2px #eee5,
+            inset 2px 2px 20px 2px rgba(75, 86, 128, 0.933);
+    }
 }
 
 #heroBtns {
@@ -100,16 +129,37 @@ body {
 /* OVERVIEW */
 #overview {
     background-color: #7779;
-    padding: 1em 2em;
+    padding: 1em 0.75em;
     color: #fefefe !important;
     border-radius: 1em;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
 
-    /* max-height: 50%; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /**/
+    max-height: 75%;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
 }
 
 .overflow-container {
     height: 700px;
-    overflow: scroll;
+    overflow: auto;
+    padding: 0;
+}
+
+.overview__header {
+    position: relative !important;
+    width: 100%;
+}
+.closeBtn {
+    position: absolute;
+    top: 50%;
+    right: 1em;
+    transform: translateY(-50%);
 }
