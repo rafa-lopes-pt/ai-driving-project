@@ -1,165 +1,179 @@
-/* Yes this should be on the main.scss file with neatly nested classes 
- Bootstrap was added later, and thus the need to override some vars 
- Since the goal of the project is not css per say...i think it aint that 
-bad to have 3 messy files that should be better written 
-
-        Thanks for understanding!(if you dont, then you probably dont know what is to solve and fix stuff at 3am)
-*/
-
 body {
-    background: #123;
-    background-image: url("../media/bg.jpg");
+	background: #123;
+	background-image: url("../media/bg.jpg");
 
-    background-size: cover;
-    background-blend-mode: color-dodge;
-    height: 100svh;
-    background-color: rgba(2, 12, 44, 0.98);
+	background-size: cover;
+	background-blend-mode: color-dodge;
+	height: 100svh;
+	background-color: rgba(2, 12, 44, 0.98);
 
-    position: relative;
-    backdrop-filter: blur(2px);
+	position: relative;
+	backdrop-filter: blur(2px);
 }
 #root {
-    height: 100%;
-    display: flex;
-    flex-flow: column;
+	height: 100%;
+	display: flex;
+	flex-flow: column;
 }
 /* Header */
 #header-nav {
-    padding: 0.25em 1.5em;
-    flex: 0;
-    /* height: 7vh; */
+	padding: 0.25em 1.5em;
+	flex: 0;
+	/* height: 7vh; */
 }
 
 #header-nav__brand {
-    text-overflow: wrap;
-    max-width: 20%;
-    cursor: pointer;
+	text-overflow: wrap;
+	max-width: 20%;
+	cursor: pointer;
 }
 
 /* Main */
 #content {
-    /* position: absolute;
+	/* position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
     top: 0; */
-    flex: auto;
-    padding: 0;
+	flex: auto;
+	padding: 0;
 
-    overflow: hidden;
-    /* padding: 1.5rem 1rem; */
+	overflow: hidden;
+	display: flex;
+	place-content: center;
+	place-items: center;
+	/* padding: 1.5rem 1rem; */
 }
 #content > * {
-    width: 100%;
+	width: 100%;
 }
 
 /* Hero */
 #hero {
-    width: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+
+	place-content: center;
+	place-items: center;
+
+	gap: 0;
+
+	padding: 2rem;
+
+	h1 {
+		font-size: 3rem;
+		justify-content: center;
+		justify-items: center;
+
+		@media (hover: none) {
+			font-size: 2rem;
+		}
+	}
 }
 #tech-stack__row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 90%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 90%;
 }
 .tech-stack__col {
-    display: flex;
-    flex-direction: column;
-    place-content: center;
-    place-items: center;
-    width: 33%;
+	display: flex;
+	flex-direction: column;
+	place-content: center;
+	place-items: center;
+	width: 33%;
 }
 
 .tech-stack__img {
-    transform: translateY(1.3em);
-    transition: all 0.5s ease-out;
-    height: 8rem;
+	transform: translateY(1.3em);
+	transition: all 0.5s ease-out;
+	height: 8rem;
 
-    aspect-ratio: square;
+	aspect-ratio: square;
 }
 
 @media (hover: none) {
-    .tech-stack__img {
-        height: 3rem;
-    }
-    .tech-stack__col .tech-stack__img {
-        transform: translateY(0em);
-    }
+	.tech-stack__img {
+		height: 2rem;
+	}
+	.tech-stack__col .tech-stack__img {
+		transform: translateY(0em);
+	}
 
-    .tech-stack__col .tech-stack__title {
-        opacity: 1;
-        background-color: #1f5491aa;
-        box-shadow: 2px 2px 20px 2px #eee5,
-            inset 2px 2px 20px 2px rgba(75, 86, 128, 0.933);
-        font-size: 1rem;
-        padding: 0.25rem 0.5rem;
-    }
+	.tech-stack__col .tech-stack__title {
+		opacity: 1;
+		background-color: #1f5491aa;
+		box-shadow: 2px 2px 20px 2px #eee5,
+			inset 2px 2px 20px 2px rgba(75, 86, 128, 0.933);
+		font-size: 0.75rem;
+		padding: 0.25rem 0.5rem;
+	}
 }
 
 .tech-stack__title {
-    opacity: 0;
-    transition: all 0.4s ease-in-out;
-    margin: 0.25em;
+	opacity: 0;
+	transition: all 0.4s ease-in-out;
+	margin: 0.25em;
 }
 
 @media (hover: hover) {
-    .tech-stack__col:hover .tech-stack__img {
-        transform: translateY(0em);
-    }
+	.tech-stack__col:hover .tech-stack__img {
+		transform: translateY(0em);
+	}
 
-    .tech-stack__col:hover .tech-stack__title {
-        opacity: 1;
-        background-color: #1f5491aa;
-        box-shadow: 2px 2px 20px 2px #eee5,
-            inset 2px 2px 20px 2px rgba(75, 86, 128, 0.933);
-    }
+	.tech-stack__col:hover .tech-stack__title {
+		opacity: 1;
+		background-color: #1f5491aa;
+		box-shadow: 2px 2px 20px 2px #eee5,
+			inset 2px 2px 20px 2px rgba(75, 86, 128, 0.933);
+	}
 }
 
 #heroBtns {
-    /* background-color: #fefefe50; */
-    width: fit-content;
-    padding: 0.75em 1.25em;
-    border-radius: 5px;
+	/* background-color: #fefefe50; */
+	width: fit-content;
+	padding: 0.75em 1.25em;
+	border-radius: 5px;
 }
 #heroBtns > * {
-    margin: 0em 1em;
+	margin: 0em 1em;
 }
 
 /* OVERVIEW */
 #overview {
-    background-color: #7779;
-    padding: 1em 0.75em;
-    color: #fefefe !important;
-    border-radius: 1em;
-    backdrop-filter: blur(10px);
+	background-color: #7779;
+	padding: 1em 0.75em;
+	color: #fefefe !important;
+	border-radius: 1em;
+	backdrop-filter: blur(10px);
 
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /**/
-    max-height: 75%;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	/**/
+	max-height: 75%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: start;
 }
 
 .overflow-container {
-    height: 700px;
-    overflow: auto;
-    padding: 0;
+	height: 700px;
+	overflow: auto;
+	padding: 0;
 }
 
 .overview__header {
-    position: relative !important;
-    width: 100%;
+	position: relative !important;
+	width: 100%;
 }
 .closeBtn {
-    position: absolute;
-    top: 50%;
-    right: 1em;
-    transform: translateY(-50%);
+	position: absolute;
+	top: 50%;
+	right: 1em;
+	transform: translateY(-50%);
 }

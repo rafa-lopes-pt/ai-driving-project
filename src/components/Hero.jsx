@@ -3,7 +3,7 @@ import { Button, Col, Container, Image, Row } from "react-bootstrap";
 export default function Hero({ overviewHandler, simulationHandler }) {
     return (
         <Container fluid id="hero">
-            <Container fluid className="mt-4 mb-4">
+            <Container fluid className="">
                 <div className="text-center  mx-auto" id="tech-stack__row">
                     <div className="tech-stack__col">
                         <img
@@ -31,7 +31,7 @@ export default function Hero({ overviewHandler, simulationHandler }) {
                     </div>
                 </div>
             </Container>
-            <h1 className="text-center m-5">AI Driving Simulation</h1>
+            <h1 className="text-center">AI Driving Simulation</h1>
             <Container id="heroBtns" fluid>
                 <Button variant="outline-info" onClick={overviewHandler}>
                     Overview
