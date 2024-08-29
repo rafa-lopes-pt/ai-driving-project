@@ -36,7 +36,7 @@ export default function Header({ showHome, handleHomeNav }) {
                             Original Project
                         </Nav.Link>
                         <Nav.Link
-                            href="https://github.com/rafa-lopes-pt/"
+                            href="https://github.com/rafa-lopes-pt/ai-driving-project"
                             target="_blank"
                         >
                             <i class="fa-brands fa-github me-2"></i>
