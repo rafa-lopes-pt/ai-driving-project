@@ -1,0 +1,15 @@
+name: Set Language Badges
+
+on:
+    push:
+
+jobs:
+    set_language_badges:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - name: Set language badges
+              uses: actions/core@v3
+              with:
+                  name: languages
+                  value: "React, TypeScript, Sass"
