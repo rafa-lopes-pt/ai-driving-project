@@ -7,9 +7,9 @@ jobs:
     set_language_badges:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
             - name: Set language badges
-              uses: actions/core@v3
+              uses: actions/core@v4
               with:
                   name: languages
                   value: "React, TypeScript, Sass"
